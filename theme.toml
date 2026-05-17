@@ -1,0 +1,137 @@
+# ==============================================================================
+# NORDIC HIGH-PERFORMANCE TUI THEME FOR YAZI
+# Optimized for rich visual feedback, clear hierarchy, and smooth borders.
+# ==============================================================================
+
+# -- MANAGER CONFIGURATION -----------------------------------------------------
+[manager]
+cwd = { fg = "#88c0d0", bold = true } # Ciano Frost para o diretório atual
+
+# Hover e Seleção de Arquivos
+hover         = { bg = "#3b4252", bold = true }
+preview_hover = { bg = "#434c5e", underline = true }
+line_mode     = { fg = "#4c566a" }
+border_style  = { fg = "#434c5e" }
+
+# Marcadores de links e arquivos
+tab_active    = { bg = "#81a1c1", fg = "#2e3440", bold = true }
+tab_inactive  = { bg = "#2e3440", fg = "#d8dee9" }
+tab_width     = 8
+
+# Contadores de busca e painel lateral
+count_copied  = { bg = "#a3be8c", fg = "#2e3440", bold = true }
+count_cut     = { bg = "#bf616a", fg = "#2e3440", bold = true }
+count_selected= { bg = "#b48ead", fg = "#2e3440", bold = true }
+
+# -- STATUS BAR ----------------------------------------------------------------
+[status]
+separator_open  = ""
+separator_close = ""
+
+# Modos de Operação (Estilo Vim/Nord)
+normal_main = { bg = "#81a1c1", fg = "#2e3440", bold = true }
+normal_alt  = { bg = "#3b4252", fg = "#81a1c1" }
+select_main = { bg = "#b48ead", fg = "#2e3440", bold = true }
+select_alt  = { bg = "#3b4252", fg = "#b48ead" }
+unset_main  = { bg = "#bf616a", fg = "#2e3440", bold = true }
+unset_alt   = { bg = "#3b4252", fg = "#bf616a" }
+
+# Permissões e Detalhes do arquivo na barra
+permissions_t = { fg = "#a3be8c" }
+permissions_r = { fg = "#ebcb8b" }
+permissions_w = { fg = "#bf616a" }
+permissions_x = { fg = "#a3be8c" }
+permissions_s = { fg = "#4c566a" }
+
+# -- INPUT COMPONENT (Caixas de diálogo / Renomear) -----------------------------
+[input]
+border   = { fg = "#88c0d0" }
+title    = { fg = "#88c0d0", bold = true }
+value    = { fg = "#d8dee9" }
+selected = { bg = "#434c5e", bold = true }
+
+# -- CHOOSE COMPONENT (Menus de Seleção Internos) -------------------------------
+[choose]
+border   = { fg = "#434c5e" }
+title    = { fg = "#81a1c1", bold = true }
+value    = { fg = "#d8dee9" }
+selected = { bg = "#3b4252", fg = "#88c0d0", bold = true }
+
+# -- TASKS COMPONENT (Gerenciador de tarefas / Downloads) -----------------------
+[tasks]
+border  = { fg = "#434c5e" }
+title   = { fg = "#ebcb8b", bold = true }
+hover   = { bg = "#3b4252", fg = "#88c0d0" }
+
+# -- SELECT COMPONENT (Caixas de Opções) ----------------------------------------
+[select]
+border   = { fg = "#434c5e" }
+title    = { fg = "#81a1c1", bold = true }
+active   = { fg = "#b48ead", bold = true }
+inactive = { fg = "#d8dee9" }
+
+# -- HELP COMPONENT (Tela de Atalhos de Teclado) -------------------------------
+[help]
+border   = { fg = "#434c5e" }
+title    = { fg = "#a3be8c", bold = true }
+footer   = { bg = "#3b4252", fg = "#d8dee9" }
+on       = { fg = "#b48ead", bold = true }
+run      = { fg = "#88c0d0" }
+desc     = { fg = "#d8dee9" }
+
+# -- FILE TYPE RULES (Colorização Avançada por Extensão) ------------------------
+[filetype]
+rules = [
+	# Diretórios
+	{ name = "*/", fg = "#81a1c1", bold = true },
+
+	# Mídias e Imagens (Frost & Aurora Teal)
+	{ mime = "image/*", fg = "#8fbcbb" },
+	{ mime = "video/*", fg = "#b48ead" },
+	{ mime = "audio/*", fg = "#b48ead" },
+
+	# Arquivos Compactados (Aurora Laranja)
+	{ mime = "application/zip", fg = "#d08770" },
+	{ mime = "application/x-tar", fg = "#d08770" },
+	{ mime = "application/x-bzip2", fg = "#d08770" },
+	{ mime = "application/x-7z-compressed", fg = "#d08770" },
+	{ mime = "application/x-rar", fg = "#d08770" },
+
+	# Documentos e Texto (Aurora Amarelo)
+	{ name = "*.md", fg = "#ebcb8b", bold = true },
+	{ name = "*.txt", fg = "#d8dee9" },
+	{ name = "*.pdf", fg = "#bf616a" },
+	{ name = "*.json", fg = "#ebcb8b" },
+	{ name = "*.toml", fg = "#ebcb8b" },
+	{ name = "*.yaml", fg = "#ebcb8b" },
+	{ name = "*.yml", fg = "#ebcb8b" },
+
+	# Scripts e Desenvolvimento (Ciano Frost / Verde)
+	{ name = "*.sh", fg = "#a3be8c", bold = true },
+	{ name = "*.zsh", fg = "#a3be8c", bold = true },
+	{ name = "*.py", fg = "#81a1c1" },
+	{ name = "*.rs", fg = "#d08770", bold = true },
+	{ name = "*.go", fg = "#88c0d0" },
+	{ name = "*.js", fg = "#ebcb8b" },
+	{ name = "*.ts", fg = "#81a1c1" },
+	{ name = "*.lua", fg = "#5e81ac" },
+	{ name = "*.conf", fg = "#4c566a" },
+
+	# Arquivos de Configuração Ocultos (.dotfiles)
+	{ name = ".*", fg = "#4c566a" },
+
+	# Regra geral para o resto
+	{ name = "*", fg = "#d8dee9" }
+]
+
+# -- COMPLETION COMPONENT (Menu de Autocompletar) -------------------------------
+[completion]
+border   = { fg = "#88c0d0" }
+active   = { bg = "#434c5e", fg = "#88c0d0", bold = true }
+inactive = { fg = "#d8dee9" }
+
+# -- LINEMODE CONFIGURATION ----------------------------------------------------
+[linemode]
+size     = { fg = "#4c566a" }
+mtime    = { fg = "#4c566a" }
+permissions = { fg = "#4c566a" }
